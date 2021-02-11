@@ -30,6 +30,15 @@ export function fetchAnimals () {
       })
   }}
 
+export function getWinners () {
+  return dispatch => {
+    return getAnimals()
+      .then(animals => {
+        dispatch(setAnimals(animals))
+        return null
+      })
+
+}}
 
 
 

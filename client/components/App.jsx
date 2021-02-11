@@ -4,6 +4,8 @@ import { HashRouter as Router, Route } from 'react-router-dom'
 
 import Home from './Home'
 import Fight from './Fight'
+import EndScreen from './EndScreen'
+import Profile from './Profile'
 
 
 const App = () => {
@@ -13,12 +15,14 @@ const App = () => {
        <Router>
          <Route path='/' exact component={Home}/>
          <Route path='/fight' exact component={Fight}/>
+         <Route path='/endscreen' exact component={EndScreen}/>
+         <Route path='/profile/:id' exact component={Profile} />
        </Router>
       
     </>
   )
 }
 
-export default App
+export default connect()(App)
 
 
