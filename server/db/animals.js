@@ -4,9 +4,9 @@ function getAnimals (db = connection) {
   return db('animals').select()
 }
 
-function getAnimalByName (name, db = connection) {
+function getAnimalById (id, db = connection) {
   return db('animals') 
-  .where('name', name)
+  .where('id', id)
   .select()
   .first()
 }
@@ -21,6 +21,6 @@ function addAnimal (animal, db = connection) {
 
 module.exports = {
   getAnimals,
-  getAnimalByName,
+  getAnimalById,
   addAnimal
 }

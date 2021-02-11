@@ -18,8 +18,8 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/:name', (req, res) => {
-  db.getAnimalByName(req.params.name)
+router.get('/:id', (req, res) => {
+  db.getAnimalById(req.params.id)
     .then(animal => {
       res.json(animal)
      
