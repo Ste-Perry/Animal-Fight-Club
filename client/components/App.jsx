@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
+import { HashRouter as Router, Route } from 'react-router-dom'
 
-import { fetchAnimals } from '../actions'
+import Home from './Home'
+import Fight from './Fight'
 
-const App = (props) => {
 
-  useEffect(() => {
-    props.dispatch(fetchAnimals())
-  })
+const App = () => {
 
+  
   return (
     <>
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Animals!</h1>
-        <ul>
-          {props.animals.map(animal => (
-            <li key={animal.id}>{animal.name}</li>
-          ))}
-        </ul>
-      </div>
+      <h1 className='title'>Animal Fight Club!!!!!</h1>
+       <Router>
+         <Route path='/' exact component={Home}/>
+         <Route path='/fight' exact component={Fight}/>
+       </Router>
+      
     </>
   )
 }
-const mapStateToProps = (globalState) => {
-  return {
-    animals: globalState.animals
-  }
-}
 
-export default connect(mapStateToProps)(App)
+export default App
+
 
