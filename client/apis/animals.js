@@ -8,3 +8,15 @@ export function getAnimals () {
       return res.body
     })
 }
+export function getAnimalByName (name) {
+  return request.get(rootUrl +'/animals/' + name)
+  .then(res => {
+    return res.body
+  })
+}
+
+export function addAnimal (animal) {
+  return request.post(rootUrl + '/animals')
+  .send(animal)
+  .then(res => res.body)
+}
