@@ -3,3 +3,21 @@ html,
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+.title{
+  text-align: center;
+}
+
+
+.animal {
+  &-list {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  &-img {
+    height: 300px;
+    width: auto;
+  }
+}
+

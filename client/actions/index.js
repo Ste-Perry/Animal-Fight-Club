@@ -16,5 +16,11 @@ export function fetchAnimals () {
         dispatch(setAnimals(animals))
         return null
       })
-  }
-}
+  }}
+
+
+// export function getRandomNumber () {
+//   return Math.random() * 10
+// }
+
+
