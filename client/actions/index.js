@@ -19,8 +19,8 @@ export function fetchAnimals () {
   }}
 
 
-// export function getRandomNumber () {
-//   return Math.random() * 10
-// }
+export function getRandomNumber () {
+  return Math.ceil(Math.random() * 10)
+}
 
 

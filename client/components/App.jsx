@@ -7,8 +7,6 @@ import Fight from './Fight'
 
 
 const App = () => {
-
-  
   return (
     <>
       <h1 className='title'>Animal Fight Club!!!!!</h1>
