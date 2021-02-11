@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
-import {getRandomNumber} from '../actions/index'
+import {getRandomNumber, setWinners} from '../actions/index'
 
 
 import { fetchAnimals } from '../actions'
@@ -23,7 +23,6 @@ const Fight = (props) => {
 
   console.log(fighterA, fighterB)
 
-  // <a href={animal.url}/>
 
   return(
     <>
@@ -39,7 +38,7 @@ const Fight = (props) => {
                 return  <div className='animal-stuff' key={animal.id}><h2>
                   {animal.name}</h2> 
                   <img className='animal-img' src={`${animal.url}`} alt='animal pic'/><br/>
-                  <button> <Link to='/fight'>WINNER!!</Link></button>
+                  <button onClick={() => {props.dispatch(setWinners(animal))}}> <Link to='/fight'>WINNER!!</Link></button>
                 </div>
             }})}
       </div>
