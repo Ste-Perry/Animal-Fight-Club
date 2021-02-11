@@ -2,6 +2,8 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: lemonchiffon;
+ 
 }
 
 .title{
@@ -21,3 +23,10 @@ body {
   }
 }
 
+.animalProfile {
+  &-img{
+    height: 500px;
+  width: auto;
+  }
+  text-align: center;
+}
