@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+import { fetchAnimals } from '../actions'
 
 const App = (props) => {
 
   useEffect(() => {
-    props.dispatch(fetchFruits())
+    props.dispatch(fetchAnimals())
   })
 
   return (
     <>
       <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
+        <h1>Fullstack Boilerplate - with Animals!</h1>
         <ul>
-          {props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
+          {props.animals.map(animal => (
+            <li key={animal.id}>{animal.name}</li>
           ))}
         </ul>
       </div>
@@ -24,7 +24,7 @@ const App = (props) => {
 }
 const mapStateToProps = (globalState) => {
   return {
-    fruits: globalState.fruits
+    animals: globalState.animals
   }
 }
 
