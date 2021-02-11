@@ -9,8 +9,6 @@ import Profile from './Profile'
 
 
 const App = () => {
-
-  
   return (
     <>
       <h1 className='title'>Animal Fight Club!!!!!</h1>
