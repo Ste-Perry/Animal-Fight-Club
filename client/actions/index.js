@@ -18,6 +18,15 @@ export function fetchAnimals () {
       })
   }}
 
+export function getWinners () {
+  return dispatch => {
+    return getAnimals()
+      .then(animals => {
+        dispatch(setAnimals(animals))
+        return null
+      })
+
+}}
 
 // export function getRandomNumber () {
 //   return Math.random() * 10

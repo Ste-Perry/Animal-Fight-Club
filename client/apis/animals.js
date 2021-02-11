@@ -8,8 +8,8 @@ export function getAnimals () {
       return res.body
     })
 }
-export function getAnimalByName (name) {
-  return request.get(rootUrl +'/animals/' + name)
+export function getAnimalById (id) {
+  return request.get(rootUrl +'/animals/' + id)
   .then(res => {
     return res.body
   })
