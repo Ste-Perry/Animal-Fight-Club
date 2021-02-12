@@ -8,7 +8,7 @@ const reducer = (state = initialState, action) => {
       return action.animals
     case SET_WINNERS:
       state.map(animal => {
-        if(animal.id === action.id) {
+        if(animal.id === action.animals.id) {
           animal.wins++
         }
         return [...state, {id: action.id, name: action.name, url: action.url, wins: action.wins}]

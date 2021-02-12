@@ -26,21 +26,25 @@ const Fight = (props) => {
 
   return(
     <>
-      <h1 className='title'>Choose your fighter!</h1>
-      <h2 className='title'>Who will win!</h2>
-      <div className='link-button'><button><Link to='/'>Home</Link></button></div>
-      <br/>
-      <br/>
-      <div className='link-button'><button><Link to='/fight'>Fight!!!!</Link></button></div>
-      <div className='animal-column'>
-            {props.animals.map(animal => {
-              if(animal.id == fighterA || fighterB == animal.id){
-                return  <div className='animal-stuff' key={animal.id}><h2>
-                  {animal.name}</h2> 
-                  <img className='animal-img' src={`${animal.url}`} alt='animal pic'/><br/>
-                  <button onClick={() => {props.dispatch(setWinners(animal))}}> <Link to='/fight'>WINNER!!</Link></button>
-                </div>
-            }})}
+     <div className='background-img' style={{
+          backgroundImage: 'url("/images/background-new.jpg")'
+        }}>
+        <h1 className='title'>Choose your fighter!</h1>
+        <h2 className='title'>Who will win!</h2>
+        <div className='link-button'><button><Link to='/'>Home</Link></button></div>
+        <br/>
+        <br/>
+        <div className='link-button'><button><Link to='/leaderboard'>Leaderboard</Link></button></div>
+        <div className='animal-column'>
+              {props.animals.map(animal => {
+                if(animal.id == fighterA || fighterB == animal.id){
+                  return  <div className='animal-stuff' key={animal.id}><h2>
+                    {animal.name}</h2> 
+                    <img className='animal-img' src={`${animal.url}`} alt='animal pic'/><br/>
+                    <button onClick={() => {props.dispatch(setWinners(animal))}}> <Link to='/fight'>WINNER!!</Link></button>
+                  </div>
+              }})}
+        </div>
       </div>
     </>
   )

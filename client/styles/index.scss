@@ -6,6 +6,11 @@ body {
  
 }
 
+.home{
+  text-align: center;
+  align-items: center;
+}
+
 .title{
   text-align: center;
 }
@@ -14,13 +19,18 @@ body {
   text-align: center;
 }
 
+.background-img{
+   width: 100vw;
+   height: 1488px;
+}
+
 
 
 .animal {
-  // &-list {
-  //   list-style-type: none;
-  //   text-align: center;
-  // }
+  &-list {
+    list-style-type: none;
+    text-align: center;
+  }
   
   &-img {
     height: 400px;
@@ -33,6 +43,12 @@ body {
   flex-direction: row;
   padding-left: 100px;
   }
+
+  &-home-pic{
+    padding-top: 100px;
+    padding-left: 36%;
+  }
+
 }
 
 .animal-stuff{
@@ -40,6 +56,8 @@ body {
   padding-left: 90px;
   padding-right: 90px
 }
+
+
 
 .animalProfile {
   &-img{

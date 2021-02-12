@@ -12,16 +12,19 @@ const Home = (props) => {
   }, [])
 
   return(
+    
     <>
-      <h1 className='title'>Choose your fighter</h1>
-      {/* <ul>
-          {props.animals.map(animal => {
-            if(animal.id == animal.id){
-              return <li key={animal.id}>{animal.name}</li>
-          }})}
-      </ul> */}
-      <button><Link to='/fight'>Ready to Fight</Link></button>
+    <div className='title'>
+      <h1> Are you Ready to fight!!</h1>
+      
+      <button className=''><Link to='/fight'>Ready to Fight</Link></button>
+      
+    </div>
+    <div className='animal-home-pic'>
+      <img src='/images/homepage.jpg'/>
+  </div>
     </>
+    
   )
 }
 
