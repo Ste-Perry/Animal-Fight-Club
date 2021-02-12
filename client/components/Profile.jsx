@@ -38,6 +38,7 @@ function Profile (props) {
      {redirect && (<Redirect to="/" />)}
      <div className='animalProfile'>
       <h2>{animal.name}</h2>
+
       <img className="animalimg"src={animal.url}></img>
       <h2>Comments:</h2>
       {/* <div> */}
