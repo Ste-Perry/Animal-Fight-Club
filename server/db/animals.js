@@ -17,10 +17,22 @@ function addAnimal (animal, db = connection) {
   .then(ids => ids[0])
 }
 
+function getComments (db = connection) {
+  return db('comments').select()
+}
+
+function addComment (comment, db = connection) {
+  return db('comments')
+  .insert(comment[comment] , comment[animal_id])
+  .then(ids => ids[0])
+}
+
 
 
 module.exports = {
   getAnimals,
   getAnimalById,
-  addAnimal
+  addAnimal,
+  getComments,
+  addComment
 }

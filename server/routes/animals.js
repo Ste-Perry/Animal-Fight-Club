@@ -18,6 +18,20 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/comments', (req, res) => {
+  db.getComments()
+    .then(results => {
+      // console.log(results)
+      res.json(results)
+     
+      return null
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).json({ message: 'Somthing went wrong' })
+    })
+})
+
 router.get('/:id', (req, res) => {
   db.getAnimalById(req.params.id)
     .then(animal => {
@@ -41,4 +55,20 @@ router.post('/', (req, res) => {
     res.status(500).json({ message: 'Somthing went wrong' })
   })
 })
+
+
+router.post('/:id', (req, res) => {
+  db.addComment(req.body)
+  .then(id => {
+    res.json(id)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json({ message: 'Somthing went wrong' })
+  })
+})
+
+
+
+
 module.exports = router

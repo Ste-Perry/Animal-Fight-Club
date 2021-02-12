@@ -42,9 +42,22 @@ body {
 }
 
 .animalProfile {
-  &-img{
-    height: 500px;
-  width: auto;
-  }
   text-align: center;
+}
+
+.animalimg { 
+  height: 500px;
+  width: auto;
+}
+
+.backimg {
+  content: "";
+      background-image: url('https://placekitten.com/1200/800');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      
 }
