@@ -20,3 +20,20 @@ export function addAnimal (animal) {
   .send(animal)
   .then(res => res.body)
 }
+
+export function addComment (comment, animalId) {
+  let obj = {
+    comment: comment,
+    animal_id: animalId
+  }
+  return request.post(rootUrl + '/animals/'+ animalId)
+  .send(obj)
+  .then(res => res.body)
+}
+
+export function getComments () {
+  return request.get(rootUrl + '/animals/comments')
+    .then(res => {
+      return res.body
+    })
+}

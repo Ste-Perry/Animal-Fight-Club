@@ -21,6 +21,8 @@ const Home = (props) => {
           }})}
       </ul> */}
       <button><Link to='/fight'>Ready to Fight</Link></button>
+
+      <button><Link to="/addAnimal">Add an Animal!</Link></button>
     </>
   )
 }
