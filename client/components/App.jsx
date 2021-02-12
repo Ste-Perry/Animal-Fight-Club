@@ -12,7 +12,7 @@ const App = () => {
 
   
   return (
-    <>
+    <div className="backimg">
       <h1 className='title'>Animal Fight Club!!!!!</h1>
        <Router>
          <Route path='/' exact component={Home}/>
@@ -21,7 +21,7 @@ const App = () => {
          <Route path='/profile/:id' exact component={Profile} />
        </Router>
       
-    </>
+    </div>
   )
 }
 

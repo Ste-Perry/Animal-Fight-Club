@@ -2,12 +2,13 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: lemonchiffon;
- 
+  
 }
+
 
 .title{
   text-align: center;
+
 }
 
 
@@ -29,4 +30,16 @@ body {
   width: auto;
   }
   text-align: center;
+}
+
+.backimg {
+  content: "";
+      background-image: url('https://placekitten.com/1200/800');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      
 }
