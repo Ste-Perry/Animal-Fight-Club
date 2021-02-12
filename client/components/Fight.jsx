@@ -8,6 +8,24 @@ import { fetchAnimals } from '../actions'
 
 const Fight = (props) => {
 
+  const [isClicked, setClicked] = useState(false)
+
+  const onClickSound = () => {
+    playTheSound('/sounds/mortalcombattheme.mp3')
+    setClicked(true)
+  }
+
+  const playTheSound = (sound) => {
+    const audio = new Audio(sound)
+    audio.oncanplaythrough = function(){
+      audio.play()
+    }
+    audio.loop = true
+    audio.onended = function(){
+      audio.play()
+    }
+  }
+
   useEffect(() => {
     props.dispatch(fetchAnimals())
   }, [])
@@ -35,6 +53,9 @@ const Fight = (props) => {
         <br/>
         <br/>
         <div className='link-button'><button><Link to='/leaderboard'>Leaderboard</Link></button></div>
+        {!isClicked && <button onClick={() => {
+        onClickSound()
+      }}>play music test</button>}
         <div className='animal-column'>
               {props.animals.map(animal => {
                 if(animal.id == fighterA || fighterB == animal.id){

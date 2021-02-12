@@ -30,8 +30,6 @@ export function fetchAnimals () {
       })
   }}
 
-  
-
 export function getWinners () {
   return dispatch => {
     return getAnimals()
