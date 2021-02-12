@@ -19,7 +19,7 @@ const Leaderboard = (props) => {
       <ul>
           {props.animals.map(animal => {
             if(animal.id == animal.id){
-              return <li key={animal.id}>{animal.name} {animal.wins}</li>
+              return <li key={animal.id}><Link to={`/profile/${animal.id}`}>{animal.name}</Link> {animal.wins}</li>
           }})}
       </ul>
     </>
