@@ -13,16 +13,16 @@ const Leaderboard = (props) => {
   })
 
   return(
-    <>
+    <div className="animal-list">
     <Link to='/fight'>Back</Link>
       <h1> Here is the Winners!!!!</h1>
-      <ul>
+      <ul className="animal-list">
           {props.animals.map(animal => {
             if(animal.id == animal.id){
               return <li key={animal.id}><Link to={`/profile/${animal.id}`}>{animal.name}</Link> {animal.wins}</li>
           }})}
       </ul>
-    </>
+    </div>
   )
 
 }
